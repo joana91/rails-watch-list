@@ -4,4 +4,8 @@
 <%= link_to "Back to Home", lists_path %>
 <% @list.bookmarks.each do |bookmark| %>
   <div><%= Movie.find(bookmark.movie_id).title %></div>
+  <%= link_to bookmark_path(bookmark), method: :delete,
+  data: { confirm: "Are you sure?"} do %>
+  <i class="fa-solid fa-trash-can"></i>
+  <% end %>
 <% end %>
