@@ -1,0 +1,7 @@
+<h2><%= @list.name %></h2>
+
+<%= link_to "Add a movie", new_list_bookmark_path(@list) %>
+<%= link_to "Back to Home", lists_path %>
+<% @list.bookmarks.each do |bookmark| %>
+  <div><%= Movie.find(bookmark.movie_id).title %></div>
+<% end %>
