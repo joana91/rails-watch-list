@@ -8,15 +8,10 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
   </head>
-    <div class="navbar">
-      <%= image_tag "corn.png", class: "corn" %>
-      <div>
-        <%= link_to "My lists", "/lists", class:"navbar-right" %></a>
-        <%= link_to "New list", new_list_path, class:"navbar-right" %></a>
-      </div>
-    </div>
   <body>
+    <%= render "components/navbar" %>
     <%= yield %>
   </body>
 </html>
